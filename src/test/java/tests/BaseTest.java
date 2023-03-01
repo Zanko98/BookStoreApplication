@@ -17,6 +17,7 @@ public class BaseTest {
         Configuration.timeout = 10000;
         Configuration.baseUrl = "https://demoqa.com/";
         Configuration.headless = true;
+        Configuration.clickViaJs = true;
 
         loginPage = new LoginPage();
         bookStorePage = new BookStorePage();
