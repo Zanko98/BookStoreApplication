@@ -6,7 +6,7 @@ import lombok.extern.log4j.Log4j2;
 import static com.codeborne.selenide.Selenide.$;
 
 @Log4j2
-public class LoginPage extends BasePage {
+public class LoginPage{
 
     public void open() {
         Selenide.open("login");

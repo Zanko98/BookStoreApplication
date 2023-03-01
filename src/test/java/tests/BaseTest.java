@@ -2,11 +2,11 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 import pages.BookStorePage;
 import pages.LoginPage;
 
+@Listeners(TestListener.class)
 public class BaseTest {
 
     LoginPage loginPage;
@@ -15,7 +15,8 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
         Configuration.timeout = 10000;
-        //Configuration.headless = true;
+        Configuration.baseUrl = "https://demoqa.com/";
+        Configuration.headless = true;
 
         loginPage = new LoginPage();
         bookStorePage = new BookStorePage();

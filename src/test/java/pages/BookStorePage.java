@@ -11,12 +11,12 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Log4j2
-public class BookStorePage extends BasePage {
+public class BookStorePage{
 
     public ArrayList getBookNamesUI() {
         open("books");
         ElementsCollection booksUI = $$(By.xpath("//div[@role='rowgroup']//a"));
-        ArrayList<String> bookNamesUI = new ArrayList<>();
+        ArrayList<String> bookNamesUI = new ArrayList<String>();
         for (SelenideElement i : booksUI) {
             bookNamesUI.add(i.getText());
         }
